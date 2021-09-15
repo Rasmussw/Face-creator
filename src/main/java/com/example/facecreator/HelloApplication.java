@@ -41,8 +41,6 @@ public class HelloApplication extends Application {
         gc.clearRect(0, 0, width, height);
         root.getChildren().add(canvas);
 
-        //til her
-
         drawPrimitiveFace();
 
         stage.show();
@@ -93,8 +91,8 @@ public class HelloApplication extends Application {
     public static void drawHappyOrSad() {
 
        System.out.println("Do you want a happy or sad face?");
-        Scanner scanner = new Scanner(System.in);
-        String happyOrSad = scanner.next().toLowerCase(Locale.ROOT);
+       Scanner scanner = new Scanner(System.in);
+       String happyOrSad = scanner.next().toLowerCase(Locale.ROOT);
 
         if (happyOrSad.equals("sad")) {
             System.out.println("that was sad");
@@ -151,8 +149,6 @@ public class HelloApplication extends Application {
    //Vælg om ansigtet skal have øjne
     public static void drawEyes(int eyesSize, int pupilSize) {
 
-        //eyesColor.equals(Color.GREEN);
-
         System.out.println("Do you want Your face to have eyes?");
         Scanner scanner = new Scanner(System.in);
         String eyesYesOrNo;
@@ -177,36 +173,20 @@ public class HelloApplication extends Application {
 
     //Vælg hvilken farve øjenbrynene skal være (mellem sort og hvid)
     public static void drawEyeBrows(int widthDiameter, int hightDiameter) {
-
-        //System.out.println("What color do you want your eyebrows to be? chose between white and black");
+        System.out.println("What color do you want your eyebrows to be? chose between white and black");
         Scanner scanner = new Scanner(System.in);
         String blackEyeBrows = "black";
         String whiteEyeBrows = "white";
-
-        String eyeBrowsColor;
-        do{
-            System.out.println("What color do you want your eyebrows to be? chose between white and black");
-            while (scanner.hasNextLine()){
-                String input = scanner.nextLine();
-                System.out.println(input + " is not an option, you have to chose black or white");
-            } eyeBrowsColor = scanner.nextLine();
-        } while (eyeBrowsColor.equals(blackEyeBrows) & eyeBrowsColor.equals(whiteEyeBrows));
-
-       //String eyeBrowsColor = scanner.next().toLowerCase(Locale.ROOT);
-
+        String eyeBrowsColor = scanner.next().toLowerCase(Locale.ROOT);
 
         if (eyeBrowsColor.equals(blackEyeBrows)) {
             System.out.println("Black it is");
-
             gc.setFill(Color.BLACK);
             gc.fillOval(210, 190, widthDiameter, hightDiameter);
             gc.setFill(Color.BLACK);
             gc.fillOval(350, 190, widthDiameter, hightDiameter);
-
-
         } else if (eyeBrowsColor.equals(whiteEyeBrows)) {
             System.out.println("White it is");
-
             gc.setFill(Color.WHITE);
             gc.fillOval(210, 190, widthDiameter, hightDiameter);
             gc.setFill(Color.WHITE);
@@ -241,7 +221,6 @@ public class HelloApplication extends Application {
         System.out.println(welcomeText);
 
         launch();
-
 
     }
 }
