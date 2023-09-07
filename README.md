@@ -10,9 +10,3 @@
 - Decide whether to add eyes and adjust their size.
 - Pick the color of the eyebrows (black or white).
 - Add or remove glasses for that studious look.
-
-## Getting Started
-
-### Prerequisites
-
-Make sure you have Java installed on your machine.
